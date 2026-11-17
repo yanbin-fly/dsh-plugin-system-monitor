@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: '@local/system-monitor',
+  id: 'dsh-plugin-system-monitor',
   factory(require) {
     const React = require('react')
     const h = React.createElement
