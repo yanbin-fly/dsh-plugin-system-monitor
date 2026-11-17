@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "系统资源监控",
+    "description": "在会话输入框下方以紧凑条实时显示 CPU、内存占用与网络上下行速度。界面每秒轮询同源 JSON 接口 /system-monitor/sample；Host 半边按需采样 node:os，网络速率在 Windows 上来自常驻 typeperf 采集器，Linux 读取 /proc/net/dev，macOS 读取 netstat，无人查看时不进行任何采样。条目首次出现时网络读数会先显示占位符（—），约一秒后采集器就绪即显示数值。该条仅在已打开的会话视图中显示。"
+  }
+}

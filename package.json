@@ -1,0 +1,48 @@
+{
+  "name": "dsh-plugin-system-monitor",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: a live CPU, memory, and network up/down speed strip under the message composer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Dong Yanbin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanbin-fly/dsh-plugin-system-monitor.git"
+  },
+  "bugs": "https://github.com/yanbin-fly/dsh-plugin-system-monitor/issues",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "system-monitor",
+    "cpu",
+    "memory",
+    "network"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

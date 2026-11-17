@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "System monitor",
+    "description": "Shows live CPU and memory usage plus network download and upload speeds in a compact strip below the message composer, inside every open conversation. The strip polls the same-origin /system-monitor/sample JSON route once per second; the host half samples node:os on demand and reads network rates from a resident typeperf collector on Windows, /proc/net/dev on Linux, and netstat on macOS, so nothing samples while no strip is displayed. Network readings pause (showing an em dash) for about a second after the strip first appears while the collector starts. The strip only renders in an open session view."
+  }
+}
